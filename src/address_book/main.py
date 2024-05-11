@@ -1,12 +1,22 @@
-from contact import Contact
 from address_book import AddressBook
 
-# Created an AddressBook object
-address_book = AddressBook()
+"""
+    Main method to take the details, put it into the address book and displays it
+    
+    Parameters:
+        None
+        
+    Returns:
+        None
+"""
 
-# Feeding the details of the contact
-contact1 = Contact("Shubham", "Sah", "Malad", "Mumbai", "Maharashtra", "400097", "8779817254", "shubhamsah086@gmail.com")
 
-address_book.add_contact(contact1)
+def main():
+    address_book = AddressBook()
+    address_book.add_contact_from_input()
+    address_book.display_contacts()
 
-address_book.display_contacts()
+
+#To run the main method
+if __name__ == "__main__":
+    main()
