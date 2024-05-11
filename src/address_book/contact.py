@@ -6,7 +6,7 @@ class Contact:
 
         Parameters:
             self: Default parameter for the method inside the class
-            first_name (str): First name of the user
+            first_name (str): First name of the contact
             last_name (str): Last name of the user
             address (str): Address of the user
             city (str): City in which user live
