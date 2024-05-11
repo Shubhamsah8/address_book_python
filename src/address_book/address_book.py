@@ -1,3 +1,6 @@
+from contact import Contact
+
+
 # Class to initialize the list, add the details of the contacts in the list and display it
 class AddressBook:
     """
@@ -9,6 +12,7 @@ class AddressBook:
         Returns:
             None
     """
+
     def __init__(self):
         self.contacts = []
 
@@ -22,8 +26,32 @@ class AddressBook:
         Returns:
             None
     """
+
     def add_contact(self, contact):
         self.contacts.append(contact)
+
+    """
+        To take the input from the user
+        
+        Parameters:
+            self: Default parameter
+            
+        Returns:
+            None
+    """
+
+    def add_contact_from_input(self):
+        first_name = input("Enter First Name: ")
+        last_name = input("Enter Last Name: ")
+        address = input("Enter Address: ")
+        city = input("Enter City: ")
+        state = input("Enter State: ")
+        zip_code = input("Enter Zip Code: ")
+        phone_number = input("Enter Phone Number: ")
+        email = input("Enter Email: ")
+
+        contact = Contact(first_name, last_name, address, city, state, zip_code, phone_number, email)
+        self.add_contact(contact)
 
     """
         Displaying the contacts that has been added into the list
